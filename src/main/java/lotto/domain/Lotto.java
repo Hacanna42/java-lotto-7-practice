@@ -9,7 +9,7 @@ public class Lotto {
 
     public Lotto(List<Integer> numbers) {
         validate(numbers);
-        this.numbers = numbers;
+        this.numbers = sort(numbers);
     }
 
     public static Lotto generateRandomLotto(LottoNumbersGenerator generator) {
@@ -18,6 +18,10 @@ public class Lotto {
 
     public LottoNumbersDto getLottoNumbersDto() {
         return new LottoNumbersDto(numbers);
+    }
+
+    private List<Integer> sort(List<Integer> numbers) {
+        return numbers.stream().sorted().toList();
     }
 
     private void validate(List<Integer> numbers) {
