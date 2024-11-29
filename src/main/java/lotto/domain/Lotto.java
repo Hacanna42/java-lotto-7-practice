@@ -16,6 +16,16 @@ public class Lotto {
         return new Lotto(generator.generate());
     }
 
+    public boolean isContain(int number) {
+        return numbers.contains(number);
+    }
+
+    public int getCorrectNumbersCount(List<Integer> answerNumbers) {
+        return (int) answerNumbers.stream()
+                .filter(this::isContain)
+                .count();
+    }
+
     public LottoNumbersDto getLottoNumbersDto() {
         return new LottoNumbersDto(numbers);
     }
