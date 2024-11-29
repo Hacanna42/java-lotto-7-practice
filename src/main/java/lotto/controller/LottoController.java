@@ -29,7 +29,7 @@ public class LottoController {
         lottoService.sendPrizeMoney(userMoney, prizeResult);
 
         OutputView.printPrizeResult(prizeResult.getPrizeResult());
-        OutputView.printRateOfReturn();
+        OutputView.printRateOfReturn(userMoney.getRateOfReturn());
     }
 
     private Money getMoney() {

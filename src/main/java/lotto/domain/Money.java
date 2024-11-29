@@ -27,6 +27,10 @@ public class Money {
         getMoney(prize.getPrizeMoney() * count);
     }
 
+    public double getRateOfReturn() {
+        return ((double) earnedMoney / usedMoney) * 100;
+    }
+
     private void useMoney(long amount) {
         currentMoney -= amount;
         usedMoney += amount;
