@@ -12,12 +12,16 @@ public enum Prize {
 
     private final int requireCount;
     private final boolean requireBonusNumber;
-    private final int prizeMoney;
+    private final long prizeMoney;
 
-    Prize(int requireCount, boolean requireBonusNumber, int prizeMoney) {
+    Prize(int requireCount, boolean requireBonusNumber, long prizeMoney) {
         this.requireCount = requireCount;
         this.requireBonusNumber = requireBonusNumber;
         this.prizeMoney = prizeMoney;
+    }
+
+    public long getPrizeMoney() {
+        return prizeMoney;
     }
 
     public static Prize getPrize(int correctNumbersCount, boolean isBonusNumberCorrected) {

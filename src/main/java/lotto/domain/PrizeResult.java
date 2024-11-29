@@ -12,7 +12,7 @@ public class PrizeResult {
         }
     }
 
-    public void winPrize(Prize prize) {
+    public void addPrize(Prize prize) {
         prizeResult.compute(prize, (k, prizeCount) -> prizeCount + 1);
     }
 

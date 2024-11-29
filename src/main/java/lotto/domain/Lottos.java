@@ -31,7 +31,7 @@ public class Lottos {
             int correctNumbersCount = lotto.getCorrectNumbersCount(answerNumbers);
             boolean isBonusNumberCorrected = lotto.isContain(answerBonusNumber);
             Prize prize = Prize.getPrize(correctNumbersCount, isBonusNumberCorrected);
-            prizeResult.winPrize(prize);
+            prizeResult.addPrize(prize);
         }
 
         return prizeResult;
