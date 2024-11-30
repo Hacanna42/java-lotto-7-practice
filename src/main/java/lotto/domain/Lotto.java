@@ -13,7 +13,7 @@ public class Lotto {
         this.numbers = sort(numbers);
     }
 
-    public static Lotto generateRandomLotto(LottoNumbersGenerator generator) {
+    public static Lotto generateLotto(LottoNumbersGenerator generator) {
         return new Lotto(generator.generate());
     }
 
