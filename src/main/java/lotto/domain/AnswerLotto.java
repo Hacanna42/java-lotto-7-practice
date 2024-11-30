@@ -1,6 +1,7 @@
 package lotto.domain;
 
 import lotto.dto.AnswerNumbersDto;
+import lotto.message.ErrorMessage;
 
 public class AnswerLotto {
     private final Lotto answerLotto;
@@ -18,10 +19,10 @@ public class AnswerLotto {
 
     private void validate(Lotto answerLotto, int bonusNumber) {
         if (answerLotto.isContain(bonusNumber)) {
-            throw new IllegalArgumentException("[ERROR] 보너스 번호는 당첨 번호와 중복될 수 없습니다.");
+            throw new IllegalArgumentException(ErrorMessage.BONUS_NUMBER_DUPLICATED.getMessage());
         }
         if (!(bonusNumber >= 1 && bonusNumber <= 45)) {
-            throw new IllegalArgumentException("[ERROR] 보너스 번호는 1부터 45 사이의 숫자여야 합니다.");
+            throw new IllegalArgumentException(ErrorMessage.BONUS_NUMBER_RANGE.getMessage());
         }
     }
 }
