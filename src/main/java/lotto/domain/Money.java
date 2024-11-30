@@ -43,7 +43,7 @@ public class Money {
 
     private static void validate(long amount) {
         if (amount % TICKET_PRICE != 0) {
-            throw new IllegalArgumentException("[ERROR] ...");
+            throw new IllegalArgumentException("[ERROR] 로또 구입 금액은 1,000원 단위로 입력해야 합니다.");
         }
     }
 }

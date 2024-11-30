@@ -7,6 +7,7 @@ import lotto.dto.LottoNumbersDtos;
 
 public class OutputView {
     public static void printBoughtAmount(int amount) {
+        System.out.println();
         System.out.println(amount + "개를 구매했습니다.");
     }
 
@@ -34,7 +35,7 @@ public class OutputView {
     }
 
     private static void printPrizeResultNotice() {
-        System.out.println("당첨 통계\n---");
+        System.out.println("\n당첨 통계\n---");
     }
 
     private static void printPrizeCondition(Prize prize) {

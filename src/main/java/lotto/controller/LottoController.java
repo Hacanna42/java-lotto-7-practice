@@ -37,7 +37,7 @@ public class LottoController {
             try {
                 return Parser.parseMoney(InputView.getPurchaseAmount());
             } catch (IllegalArgumentException exception) {
-                System.out.println("[ERROR] ...");
+                System.out.println(exception.getMessage());
             }
         }
     }
@@ -49,7 +49,7 @@ public class LottoController {
                 String answerBonusNumber = InputView.getBonusNumber();
                 return Parser.parseAnswerLotto(answerLottoNumbers, answerBonusNumber);
             } catch (IllegalArgumentException exception) {
-                System.out.println("[ERROR] ...");
+                System.out.println(exception.getMessage());
             }
         }
     }
