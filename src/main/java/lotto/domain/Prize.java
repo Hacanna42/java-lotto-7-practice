@@ -10,7 +10,6 @@ public enum Prize {
     SECOND(5, true, 30_000_000),
     FIRST(6, false, 2_000_000_000);
 
-
     private final int requireCount;
     private final boolean requireBonusNumber;
     private final long prizeMoney;
