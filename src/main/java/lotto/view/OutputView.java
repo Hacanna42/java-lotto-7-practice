@@ -6,6 +6,10 @@ import lotto.dto.LottoNumbersDto;
 import lotto.dto.LottoNumbersDtos;
 
 public class OutputView {
+    public static void printErrorMessage(String errorMessage) {
+        System.out.println(errorMessage);
+    }
+
     public static void printBoughtAmount(int amount) {
         System.out.println();
         System.out.println(amount + "개를 구매했습니다.");
